@@ -1,5 +1,7 @@
 """Youtube module"""
+import os
 from pytube import YouTube
+
 
 
 # enter link
@@ -15,9 +17,9 @@ print("Description: ", yt.description)
 print("Ratings: ", yt.rating)
 
 # Getting the highest resolution possible
-ys = yt.streams.get_highest_resolution()
+yt = yt.streams.get_highest_resolution()
 
 
 print("Downloading...")
-ys.download()
+yt.download()
 print("Download completed!!")
